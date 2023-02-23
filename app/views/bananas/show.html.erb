@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @banana %>
+
+<div>
+  <%= link_to "Edit this banana", edit_banana_path(@banana) %> |
+  <%= link_to "Back to bananas", bananas_path %>
+
+  <%= button_to "Destroy this banana", @banana, method: :delete %>
+</div>
