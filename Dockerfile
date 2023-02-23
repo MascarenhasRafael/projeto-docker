@@ -1,4 +1,5 @@
-FROM ruby:3.2.0-alpine3.17
+FROM ruby:3.2.1-alpine3.17
+ENV RAILS_ENV=production
 
 WORKDIR /app
 
@@ -33,4 +34,4 @@ RUN bundle install
 RUN yarn install
 COPY . ./ 
 
-ENTRYPOINT ["rails", "s", "--environment=PRODUCTION"]
+ENTRYPOINT ["rails", "s", "--environment=production"]
